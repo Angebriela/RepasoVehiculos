@@ -33,6 +33,7 @@
             this.buttonVehiculos = new System.Windows.Forms.Button();
             this.buttonAlquiler = new System.Windows.Forms.Button();
             this.buttonReporte = new System.Windows.Forms.Button();
+            this.buttonCerrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -85,11 +86,22 @@
             this.buttonReporte.UseVisualStyleBackColor = true;
             this.buttonReporte.Click += new System.EventHandler(this.buttonReporte_Click);
             // 
+            // buttonCerrar
+            // 
+            this.buttonCerrar.Location = new System.Drawing.Point(96, 346);
+            this.buttonCerrar.Name = "buttonCerrar";
+            this.buttonCerrar.Size = new System.Drawing.Size(392, 39);
+            this.buttonCerrar.TabIndex = 6;
+            this.buttonCerrar.Text = "Cerrar";
+            this.buttonCerrar.UseVisualStyleBackColor = true;
+            this.buttonCerrar.Click += new System.EventHandler(this.buttonCerrar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 400);
+            this.ClientSize = new System.Drawing.Size(601, 421);
+            this.Controls.Add(this.buttonCerrar);
             this.Controls.Add(this.buttonReporte);
             this.Controls.Add(this.buttonAlquiler);
             this.Controls.Add(this.buttonVehiculos);
@@ -110,6 +122,7 @@
         private System.Windows.Forms.Button buttonVehiculos;
         private System.Windows.Forms.Button buttonAlquiler;
         private System.Windows.Forms.Button buttonReporte;
+        private System.Windows.Forms.Button buttonCerrar;
     }
 }
 
