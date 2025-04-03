@@ -16,5 +16,12 @@ namespace RepasoVehiculos
         {
             InitializeComponent();
         }
+
+        private void buttonMenu_Click(object sender, EventArgs e)
+        {
+            Form1 formuMenu = new Form1();
+            formuMenu.Show();
+            this.Hide();
+        }
     }
 }

@@ -22,8 +22,32 @@ namespace RepasoVehiculos
 
         }
 
-        // Dim menunprin As New Form2
-        //menunprin.Show()
-        //Me.Hide()
+        private void buttonCliente_Click(object sender, EventArgs e)
+        {
+            FormCliente formuCliente = new FormCliente();
+            formuCliente.Show();
+            this.Hide();
+        }
+
+        private void buttonVehiculos_Click(object sender, EventArgs e)
+        {
+            FormVehiculos formuVehiculos = new FormVehiculos();
+            formuVehiculos.Show();
+            this.Hide();
+        }
+
+        private void buttonAlquiler_Click(object sender, EventArgs e)
+        {
+            FormAlquiler formuAlquiler = new FormAlquiler();
+            formuAlquiler.Show();
+            this.Hide();
+        }
+
+        private void buttonReporte_Click(object sender, EventArgs e)
+        {
+            FormReporte formuReporte = new FormReporte();
+            formuReporte.Show();
+            this.Hide();
+        }
     }
 }
