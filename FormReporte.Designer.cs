@@ -30,6 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.buttonMenu = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.labelAlquiler = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -52,15 +55,35 @@
             this.buttonMenu.UseVisualStyleBackColor = true;
             this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(33, 91);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(731, 276);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // labelAlquiler
+            // 
+            this.labelAlquiler.AutoSize = true;
+            this.labelAlquiler.Location = new System.Drawing.Point(30, 383);
+            this.labelAlquiler.Name = "labelAlquiler";
+            this.labelAlquiler.Size = new System.Drawing.Size(52, 13);
+            this.labelAlquiler.TabIndex = 5;
+            this.labelAlquiler.Text = "El carro...";
+            // 
             // FormReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelAlquiler);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonMenu);
             this.Controls.Add(this.label1);
             this.Name = "FormReporte";
             this.Text = "FormReporte";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -70,5 +93,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonMenu;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label labelAlquiler;
     }
 }
