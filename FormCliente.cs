@@ -52,18 +52,5 @@ namespace RepasoVehiculos
             clientesArchivo.Guardar("../../Clientes.json", clientes);//Funcion guardar de clase ClientesArchivo
             Mostrar();
         }
-
-        /*
-         * Empleado empleado = new Empleado();
-            empleado.noEmpleado = Convert.ToInt16(numericUpDown1.Value);
-            empleado.nombre = textBox1.Text;
-            empleado.sueldo = Convert.ToDecimal(maskedTextBox2.Text);
-            empleados.Add(empleado);
-
-            EmpleadoArchivo empleadoArchivo = new EmpleadoArchivo();
-            empleadoArchivo.Guardar("../../Empleados.json", empleados);//Funcion guardar de clase EmpleadoArchivo
-            Mostrar();
-         */
-
     }
 }

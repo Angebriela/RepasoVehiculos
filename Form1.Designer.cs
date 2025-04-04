@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.buttonCliente = new System.Windows.Forms.Button();
             this.buttonVehiculos = new System.Windows.Forms.Button();
@@ -40,7 +41,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(186, 40);
+            this.label1.Location = new System.Drawing.Point(108, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(215, 30);
             this.label1.TabIndex = 0;
@@ -48,9 +49,11 @@
             // 
             // buttonCliente
             // 
-            this.buttonCliente.Location = new System.Drawing.Point(96, 93);
+            this.buttonCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonCliente.Image")));
+            this.buttonCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCliente.Location = new System.Drawing.Point(45, 86);
             this.buttonCliente.Name = "buttonCliente";
-            this.buttonCliente.Size = new System.Drawing.Size(392, 57);
+            this.buttonCliente.Size = new System.Drawing.Size(317, 57);
             this.buttonCliente.TabIndex = 2;
             this.buttonCliente.Text = "Ingreso Clientes";
             this.buttonCliente.UseVisualStyleBackColor = true;
@@ -58,9 +61,11 @@
             // 
             // buttonVehiculos
             // 
-            this.buttonVehiculos.Location = new System.Drawing.Point(96, 156);
+            this.buttonVehiculos.Image = ((System.Drawing.Image)(resources.GetObject("buttonVehiculos.Image")));
+            this.buttonVehiculos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonVehiculos.Location = new System.Drawing.Point(45, 149);
             this.buttonVehiculos.Name = "buttonVehiculos";
-            this.buttonVehiculos.Size = new System.Drawing.Size(392, 57);
+            this.buttonVehiculos.Size = new System.Drawing.Size(317, 57);
             this.buttonVehiculos.TabIndex = 3;
             this.buttonVehiculos.Text = "Ingreso Vehículos";
             this.buttonVehiculos.UseVisualStyleBackColor = true;
@@ -68,9 +73,11 @@
             // 
             // buttonAlquiler
             // 
-            this.buttonAlquiler.Location = new System.Drawing.Point(96, 219);
+            this.buttonAlquiler.Image = ((System.Drawing.Image)(resources.GetObject("buttonAlquiler.Image")));
+            this.buttonAlquiler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAlquiler.Location = new System.Drawing.Point(45, 212);
             this.buttonAlquiler.Name = "buttonAlquiler";
-            this.buttonAlquiler.Size = new System.Drawing.Size(392, 57);
+            this.buttonAlquiler.Size = new System.Drawing.Size(317, 57);
             this.buttonAlquiler.TabIndex = 4;
             this.buttonAlquiler.Text = "Alquilar Vehículo";
             this.buttonAlquiler.UseVisualStyleBackColor = true;
@@ -78,9 +85,11 @@
             // 
             // buttonReporte
             // 
-            this.buttonReporte.Location = new System.Drawing.Point(96, 282);
+            this.buttonReporte.Image = ((System.Drawing.Image)(resources.GetObject("buttonReporte.Image")));
+            this.buttonReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonReporte.Location = new System.Drawing.Point(45, 275);
             this.buttonReporte.Name = "buttonReporte";
-            this.buttonReporte.Size = new System.Drawing.Size(392, 57);
+            this.buttonReporte.Size = new System.Drawing.Size(317, 57);
             this.buttonReporte.TabIndex = 5;
             this.buttonReporte.Text = "Reporte de Alquileres";
             this.buttonReporte.UseVisualStyleBackColor = true;
@@ -88,9 +97,11 @@
             // 
             // buttonCerrar
             // 
-            this.buttonCerrar.Location = new System.Drawing.Point(96, 346);
+            this.buttonCerrar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCerrar.Image")));
+            this.buttonCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCerrar.Location = new System.Drawing.Point(45, 339);
             this.buttonCerrar.Name = "buttonCerrar";
-            this.buttonCerrar.Size = new System.Drawing.Size(392, 39);
+            this.buttonCerrar.Size = new System.Drawing.Size(317, 57);
             this.buttonCerrar.TabIndex = 6;
             this.buttonCerrar.Text = "Cerrar";
             this.buttonCerrar.UseVisualStyleBackColor = true;
@@ -100,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 421);
+            this.ClientSize = new System.Drawing.Size(418, 421);
             this.Controls.Add(this.buttonCerrar);
             this.Controls.Add(this.buttonReporte);
             this.Controls.Add(this.buttonAlquiler);
