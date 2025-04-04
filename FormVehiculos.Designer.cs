@@ -162,6 +162,7 @@
             this.buttonGuardar.TabIndex = 20;
             this.buttonGuardar.Text = "Guardar";
             this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
             // FormVehiculos
             // 
