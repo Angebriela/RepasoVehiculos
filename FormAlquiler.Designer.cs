@@ -164,6 +164,7 @@
             this.buttonGuardar.TabIndex = 23;
             this.buttonGuardar.Text = "Guardar";
             this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
             // FormAlquiler
             // 
@@ -186,6 +187,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormAlquiler";
             this.Text = "FormAlquiler";
+            this.Load += new System.EventHandler(this.FormAlquiler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
