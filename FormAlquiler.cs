@@ -55,18 +55,6 @@ namespace RepasoVehiculos
 
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
-            /*AlquilerVehiculos alquilerVehiculo = new AlquilerVehiculos();
-            alquilerVehiculo.Nit = comboBoxNit.Text;
-            alquilerVehiculo.Placa = comboBoxPlaca.Text;
-            alquilerVehiculo.FechaAlquiler = dateTimePickerAlquiler.Value;
-            alquilerVehiculo.FechaDevolucion = dateTimePickerDevolucion.Value;
-            alquilerVehiculo.KilometrosRecorridos = Convert.ToDecimal(maskedTextBoxKMrecorrido.Text);
-            alquilerVehiculos.Add(alquilerVehiculo);
-
-            AlquileresArchivo alquilerArchivo = new AlquileresArchivo();
-            alquilerArchivo.Guardar("../../Alquileres.json", alquilerVehiculos);
-            Mostrar(); codigo sin validacion de fecha*/ 
-
             AlquileresArchivo alquilerArchivo = new AlquileresArchivo();
             alquilerVehiculos = alquilerArchivo.Leer("../../Alquileres.json");
 

@@ -72,6 +72,7 @@
             this.labelAlquiler.Size = new System.Drawing.Size(52, 13);
             this.labelAlquiler.TabIndex = 5;
             this.labelAlquiler.Text = "El carro...";
+            this.labelAlquiler.Visible = false;
             // 
             // buttonMostrarReporte
             // 
