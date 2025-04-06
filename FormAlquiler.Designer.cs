@@ -147,6 +147,7 @@
             this.maskedTextBoxKMrecorrido.Name = "maskedTextBoxKMrecorrido";
             this.maskedTextBoxKMrecorrido.Size = new System.Drawing.Size(180, 20);
             this.maskedTextBoxKMrecorrido.TabIndex = 21;
+            this.maskedTextBoxKMrecorrido.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxKMrecorrido_MaskInputRejected);
             // 
             // dataGridView1
             // 

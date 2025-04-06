@@ -55,15 +55,59 @@ namespace RepasoVehiculos
 
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
-            AlquilerVehiculos alquilerVehiculo = new AlquilerVehiculos();
+            /*AlquilerVehiculos alquilerVehiculo = new AlquilerVehiculos();
             alquilerVehiculo.Nit = comboBoxNit.Text;
             alquilerVehiculo.Placa = comboBoxPlaca.Text;
             alquilerVehiculo.FechaAlquiler = dateTimePickerAlquiler.Value;
             alquilerVehiculo.FechaDevolucion = dateTimePickerDevolucion.Value;
+            alquilerVehiculo.KilometrosRecorridos = Convert.ToDecimal(maskedTextBoxKMrecorrido.Text);
+            alquilerVehiculos.Add(alquilerVehiculo);
 
             AlquileresArchivo alquilerArchivo = new AlquileresArchivo();
             alquilerArchivo.Guardar("../../Alquileres.json", alquilerVehiculos);
+            Mostrar();*/
+
+            AlquileresArchivo alquilerArchivo = new AlquileresArchivo();
+            alquilerVehiculos = alquilerArchivo.Leer("../../Alquileres.json");
+
+            string placaSeleccionada = comboBoxPlaca.Text;
+            DateTime nuevaFechaInicio = dateTimePickerAlquiler.Value;//Se guarda en variable para validar dicha fecha
+            DateTime nuevaFechaFin = dateTimePickerDevolucion.Value;
+
+            // Validar si ya existe un alquiler en las fechas ingresadas
+            bool conflicto = alquilerVehiculos.Any(a => a.Placa == placaSeleccionada &&
+                (
+                    (nuevaFechaInicio >= a.FechaAlquiler && nuevaFechaInicio <= a.FechaDevolucion) || // nueva fecha inicia durante un alquiler existente
+                    (nuevaFechaFin >= a.FechaAlquiler && nuevaFechaFin <= a.FechaDevolucion) ||       // nueva fecha termina durante un alquiler existente
+                    (nuevaFechaInicio <= a.FechaAlquiler && nuevaFechaFin >= a.FechaDevolucion)       // nuevo alquiler abarca completamente uno existente
+                )
+            );
+
+            if (conflicto)
+            {
+                MessageBox.Show("El vehículo ya está alquilado en las fechas seleccionadas.", "Error de disponibilidad", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Si no hay conflicto, se procede a guardar
+            AlquilerVehiculos alquilerVehiculo = new AlquilerVehiculos();
+            alquilerVehiculo.Nit = comboBoxNit.Text;
+            alquilerVehiculo.Placa = comboBoxPlaca.Text;
+            alquilerVehiculo.FechaAlquiler = nuevaFechaInicio;
+            alquilerVehiculo.FechaDevolucion = nuevaFechaFin;
+            alquilerVehiculo.KilometrosRecorridos = Convert.ToDecimal(maskedTextBoxKMrecorrido.Text);
+            
+
+            alquilerVehiculos.Add(alquilerVehiculo);
+            alquilerArchivo.Guardar("../../Alquileres.json", alquilerVehiculos);
             Mostrar();
+            MessageBox.Show("Alquiler registrado con éxito.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void maskedTextBoxKMrecorrido_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

@@ -52,7 +52,7 @@ namespace RepasoVehiculos
 
         private void buttonCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

@@ -35,6 +35,13 @@ namespace RepasoVehiculos
 
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
+            if (vehiculos.Any(v => v.Placa == textBoxPlaca.Text))
+            {
+                MessageBox.Show("¡Ya existe un vehículo registrado con esta placa!");
+                return; // Sale de la función sin guardar
+            }
+
+
             Vehiculo vehiculo = new Vehiculo();
             vehiculo.Placa = textBoxPlaca.Text;
             vehiculo.Marca = textBoxMarca.Text;
@@ -46,7 +53,14 @@ namespace RepasoVehiculos
             VehiculoArchivo vehiculoArchivo = new VehiculoArchivo();
             vehiculoArchivo.Guardar("../../Vehiculos.json", vehiculos);//Funcion guardar de clase VehiculoArchivo
             Mostrar();
-            
+
+            MessageBox.Show("¡Vehículo registrado correctamente!");
+
+        }
+
+        private void FormVehiculos_Load(object sender, EventArgs e)
+        {
+            Mostrar();
         }
     }
 }

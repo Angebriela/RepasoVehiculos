@@ -42,6 +42,13 @@ namespace RepasoVehiculos
 
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
+            if (clientes.Any(c => c.Nit == textBoxNit.Text))
+            {
+                MessageBox.Show("¡El cliente ya está registrado!");
+                return; // Sale de la función sin guardar
+            }
+
+
             Clientes cliente = new Clientes();
             cliente.Nit = textBoxNit.Text;
             cliente.Nombre = textBoxNombre.Text;
