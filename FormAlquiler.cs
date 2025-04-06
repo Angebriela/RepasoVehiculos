@@ -65,16 +65,16 @@ namespace RepasoVehiculos
 
             AlquileresArchivo alquilerArchivo = new AlquileresArchivo();
             alquilerArchivo.Guardar("../../Alquileres.json", alquilerVehiculos);
-            Mostrar();*/
+            Mostrar(); codigo sin validacion de fecha*/ 
 
             AlquileresArchivo alquilerArchivo = new AlquileresArchivo();
             alquilerVehiculos = alquilerArchivo.Leer("../../Alquileres.json");
 
             string placaSeleccionada = comboBoxPlaca.Text;
-            DateTime nuevaFechaInicio = dateTimePickerAlquiler.Value;//Se guarda en variable para validar dicha fecha
+            DateTime nuevaFechaInicio = dateTimePickerAlquiler.Value;//Se guarda en variable para ver fecha
             DateTime nuevaFechaFin = dateTimePickerDevolucion.Value;
 
-            // Validar si ya existe un alquiler en las fechas ingresadas
+            // Ver si se puede alquilar
             bool conflicto = alquilerVehiculos.Any(a => a.Placa == placaSeleccionada &&
                 (
                     (nuevaFechaInicio >= a.FechaAlquiler && nuevaFechaInicio <= a.FechaDevolucion) || // nueva fecha inicia durante un alquiler existente
