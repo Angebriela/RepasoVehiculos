@@ -45,25 +45,6 @@ namespace RepasoVehiculos
             alquilerVehiculos = alquileresArchivo.Leer("../../Alquileres.json");
         }
 
-        /*private void mayorKMrecorridos()
-        {
-            foreach (var vehiculo in vehiculos)
-            {
-                foreach(var alquilervehi in alquilerVehiculos)
-                {
-                    if ((vehiculo.Placa == alquilervehi.Placa))
-                    {
-                        decimal sumadeKilometros = alquilervehi.KilometrosRecorridos + sumadeKilometros.Value;
-                    }
-                }
-            }
-
-
-            AlquilerVehiculos mayorRecorrido = alquilerVehiculos.OrderByDescending(a => a.KilometrosRecorridos).First();
-            labelAlquiler.Text = "El mayor recorrido en km es: "+mayorRecorrido.ToString();
-        }*/
-
-
         private void buttonMostrarReporte_Click(object sender, EventArgs e)
         {
             foreach (var cliente in clientes)
